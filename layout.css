@@ -1,0 +1,139 @@
+/*Names the sections of the page*/
+.main-head {
+    grid-area: header;
+  }
+  .content {
+    grid-area: content;
+  }
+  .main-nav {
+    grid-area: nav;
+  }
+  .side {
+    grid-area: sidebar;
+  }
+  .ad {
+    grid-area: ad;
+  }
+  .main-footer {
+    grid-area: footer;
+  }
+/*This is a good layout for mobile*/
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "ad"
+      "footer";
+  }
+
+  @media (min-width: 100px) {
+    .wrapper {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: 100px 150px 150px 100px;
+      grid-template-areas:
+        "header header  header"
+        "nav    content sidebar"
+        "nav    content ad"
+        "footer footer  footer"
+     }
+     nav ul {
+       flex-direction: column;
+     }
+  }
+
+
+
+  body{
+    background-color: #0095ec;
+
+    color: white;   
+    text-align: center;
+    margin-top: 30px;
+    line-height: normal;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+  }
+  #logo img{ /* Logo at top of page*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    width: 20rem;
+}
+#plumbobs img{ /* Footer image in right corner, semi-transparent */
+    height:10rem;
+    right:0px;
+    bottom:0px;
+    z-index:-1;
+}
+#plumbobs{ /* Container for footer image placement*/
+  height: 160px;
+  right: 0;
+  bottom: 0;
+}
+.mainText{
+    color: white;   
+    text-align: center;
+    line-height: normal;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+  }
+  .instructions{
+    font-size: 1.2em;
+  }
+  .discriptionContainer{ /*white box around discription. Makes placement and spacing easyer */
+    margin: 2rem;
+    border: solid;
+    border-width: 4px;
+    border-color: white;
+    height: 13.5rem;
+    line-height: 13.5rem;
+    text-align: center;
+  }
+  .discription{ /* text from js script, white in a sims style font */
+    color: white;   
+    text-align: center;
+    font-size: 1.25rem;
+    line-height:normal;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+    margin-left: auto; margin-right: auto;
+  }
+  .button{ /* sims green button with white font, generates new string */
+    background-color: #58de16; 
+    border: none;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    font-family: "PT Sans Bold", "PT Sans", Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+.button:hover{
+  background-color: #66f71d; 
+}
+.links{
+    text-decoration: none;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.links:hover{
+      color: #58de16;
+      font-size: 23px;
+}
+.main-nav a { /*Code for naigation menu links */
+    text-decoration: none;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+    font-size: 19.5px;
+    color: white;
+    display: block;
+}
+.main-nav a:hover { /*Code for menu links when hovered*/
+    color: #58de16;
+    font-size: 22px;
+}

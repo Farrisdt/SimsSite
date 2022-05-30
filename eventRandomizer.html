@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sims 4 Random House Generator</title>
+        <link rel="stylesheet"
+        href="style.css">
+
+        <link rel="shortcut icon" href="images/icon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+        <div class="shiftRight">
+            <div  id="logo"> <!--logo at top of screen-->
+                <img src="images/HouseRandomizerLogo.png" alt="House Randomizer Logo">
+            </div>
+        </div>
+    </header>
+
+    <body>
+        <div class="sidebar"> <!--Navigation menu on left-->
+                <a href="houseRandomizer.html">House Generator</a>
+                <a href="familyRandomizer.html">Family Generator</a>
+                <a href="eventRandomizer.html">Random Events Generator</a>
+                <a href="challengesIndex.html">Challenges</a>
+                <a href="cheatsIndex.html">Cheats</a>
+                <a href="listsIndex.html">Helpful Lists</a>
+        </div>
+
+        <div class="shiftRight"><!--Contains page not part of menu, for centering-->
+           
+            <div class="edgespacing">
+                <h1 class="mainText">Add more variety to your game.</h1>
+                <p class="mainText instructions">Choose an interval and spin when needed: Once a sim week,
+                    each time you start playing, or if you're a true massocist, once a sim day. 
+                   <br> Use whatever milestones work for your play style. <br> Events should be completed
+                    as early as possible, for most of them that means by the end of the sim day but some 
+                    will have a stated time limit or require longer effort (Rome wasn't built in a day, and neither was that backyard rocketship)</p>
+                <div class="discriptionContainer">
+                    <div class = "discription" id="event-discription">
+                        <!--Holds event discription text (I think?)-->
+                    </div>
+                </div>
+            </div>
+
+            <div> <!--Creates the button that triggers the js newSim().-->
+                <button class="button" id="newEvent" onclick="newEvent()">New Event</button>
+                <script src="javascript.js"> </script>
+            </div>
+
+        </div>
+    </body>
+
+    <footer>
+        <div id="plumbobs"> <!--decoration in corner-->
+            <img src="images/BluePlumbobBottom.png" alt="Blue Plumbob Decoration">
+        </div>
+    </footer>
+</html>

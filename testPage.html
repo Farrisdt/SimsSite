@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet"
+        href="layout.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="main-head">The header</header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="">Nav 1</a></li>
+                    <li><a href="">Nav 2</a></li>
+                    <li><a href="">Nav 3</a></li>
+                </ul>
+            </nav>
+            <article class="content">
+                <h1>Main article area</h1>
+                <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+            </article>
+            <aside class="side">Sidebar</aside>
+            <div class="ad">Advertising</div>
+            <footer class="main-footer">The footer</footer>
+        </div>
+    </body>
+</html> -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sims 4 Random House Generator</title>
+        <link rel="stylesheet"
+         href="layout.css">
+
+        <link rel="shortcut icon" href="images/icon.png">
+    </head>
+<div class='wrapper'>
+    <header class='main-head'>
+            <div id="logo"> <!--logo at top of screen-->
+                <img src="images/HouseRandomizerLogo.png" alt="House Randomizer Logo">
+            </div>
+    </header>
+
+    <body>
+        <nav class="main-nav"> <!--Navigation menu on left-->
+                <a href="houseRandomizer.html">House Generator</a>
+                <a href="familyRandomizer.html">Family Generator</a>
+                <a href="eventRandomizer.html">Random Events Generator</a>
+                <a href="challengesIndex.html">Challenges</a>
+                <a href="cheatsIndex.html">Cheats</a>
+                <a href="listsIndex.html">Helpful Lists</a>
+        </nav>
+
+        <div class="shiftRight"><!--Contains page not part of menu, for centering-->
+            <div class="edgespacing">
+                <article class="content, discriptionContainer">
+                    <div class = "discription" id="house-discription">
+                        <!--Holds house discription text (I think?)-->
+                    </div>
+                </article>
+            </div>
+            <div> <!--Creates the button that triggers the js newHouse().-->
+                <button class="button" id="newHouse" onclick="newHouse()">New House</button>
+            </div>
+             
+            <script src="javascript.js"> </script>
+        </div>
+    </body>
+
+    <footer class='main-footer'>
+        <div id="plumbobs"> <!--decoration in corner-->
+            <img src="images/BluePlumbobBottom.png" alt="Blue Plumbob Decoration">
+        </div>
+    </footer>
+</div>
+
+</html> 

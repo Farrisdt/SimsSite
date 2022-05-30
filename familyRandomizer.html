@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sims 4 Random House Generator</title>
+        <link rel="stylesheet"
+        href="style.css">
+
+        <link rel="shortcut icon" href="images/icon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+        <div class="shiftRight">
+            <div  id="logo"> <!--logo at top of screen-->
+                <img src="images/HouseRandomizerLogo.png" alt="House Randomizer Logo">
+            </div>
+        </div>
+    </header>
+
+    <body>
+        <div class="sidebar"> <!--Navigation menu on left-->
+                <a href="houseRandomizer.html">House Generator</a>
+                <a href="familyRandomizer.html">Family Generator</a>
+                <a href="eventRandomizer.html">Random Events Generator</a>
+                <a href="challengesIndex.html">Challenges</a>
+                <a href="cheatsIndex.html">Cheats</a>
+                <a href="listsIndex.html">Helpful Lists</a>
+        </div>
+
+        <div class="shiftRight"><!--Contains page not part of menu, for centering-->
+            <div class="edgespacing">
+                <div class="discriptionContainer">
+                    <div class = "discription" id="family-discription">
+                        <!--Holds family discription text (I think?)-->
+                    </div>
+                </div>
+            </div>
+
+            <div> <!--Creates the button that triggers the js newSim().-->
+                <button class="button" id="newFamily" onclick="newFamily()">New Family</button>
+                <script src="javascript.js"> </script>
+            </div>
+            
+        </div>
+        <footer>
+            <div id="plumbobs"> <!--decoration in corner-->
+                <img src="images/BluePlumbobBottom.png" alt="Blue Plumbob Decoration">
+            </div>
+        </footer>
+    </body>
+
+
+
+</html>

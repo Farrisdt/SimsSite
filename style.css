@@ -1,0 +1,341 @@
+/* Things that are on every page*/
+body{
+    background-color: #0095ec;
+    margin: 0px; /* reset 8 */
+    padding-bottom: 20px;
+    min-height: 100vh;
+    position: relative;
+}
+.shiftRight{ /*Keeps everything centered accounting for sidebar*/
+  margin-left: 150px;
+}
+#logo img{ /* Logo at top of page*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    width: 20rem;
+}
+#plumbobs img{ /* Footer image in right corner, semi-transparent */
+    height:10rem;
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    z-index:-1;
+}
+#plumbobs{ /* Container for footer image placement*/
+  position:absolute;
+  height: 160px;
+  right: 0;
+  bottom: 0;
+}
+
+/* General Text Items*/
+.mainText{
+  color: white;   
+  text-align: center;
+  line-height: normal;
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  margin-left: auto; margin-right: auto;
+}
+.instructions{
+  font-size: 1.2em;
+}
+
+/* Generated text */
+ .discriptionContainer{ /*white box around discription. Makes placement and spacing easyer */
+    padding-left: 1.5rem; padding-right: 1.5rem;
+    margin: 2rem;
+    border: solid;
+    border-width: 4px;
+    border-color: white;
+    max-width: 50rem;
+    margin-left: auto; margin-right: auto;
+    height: 13.5rem;
+    line-height: 13.5rem;
+    text-align: center;
+}
+.edgespacing{
+  padding-left: 3rem; padding-right: 3rem;
+}
+.discription{ /* text from js script, white in a sims style font */
+  color: white;   
+  text-align: center;
+  font-size: 1.25rem;
+  line-height:normal;
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  margin-left: auto; margin-right: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* New ____ Button */
+.button{ /* sims green button with white font, generates new string */
+    background-color: #58de16; 
+    border: none;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    font-family: "PT Sans Bold", "PT Sans", Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+    padding: 1rem 2rem;
+    display: block;
+    margin-left: auto; margin-right: auto;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+.button:hover{
+  background-color: #66f71d; 
+}
+/* For lists and in-page links */
+  ul{
+      list-style-position: outside;
+      margin: 0;
+  }
+  li { 
+      list-style-image: url(images/PlumbobBullet.png); 
+    }
+    .links{
+      padding: 10px 5px 10px 10px;
+      display: block;
+      text-decoration: none;
+      font-family: "PT Sans Bold", Arial, sans-serif;
+      font-size: 20px;
+      color: white;
+      text-align: left;
+}
+  .links:hover{
+        color: #58de16;
+        font-size: 23px;
+  }
+
+/* For Nav Bar */
+.sidebar { /* Bar shape/background/placement*/
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0082ce;
+  color:white;
+  overflow-x: hidden;
+  padding-top: 20px;    
+}
+.sidebar a { /*Code for naigation menu links */
+      padding: 6px 5px 6px 15px;
+      text-decoration: none;
+      font-family: "PT Sans Bold", Arial, sans-serif;
+      font-size: 19.5px;
+      color: white;
+      display: block;
+}
+  .sidebar a:hover { /*Code for menu links when hovered*/
+      color: #58de16;
+      font-size: 22px;
+  }
+
+
+
+/* For Settings Menu*/
+
+
+
+
+
+.iconGrid{
+  margin: 0px;
+  width: 100px;
+  height: 100px;
+  float:left;
+  margin: 4px;
+}
+.packContainer{ /* Used to center icons in border*/
+    width: 550px;
+    height: 400px;
+    margin-left: auto; margin-right: auto;
+    padding: 0px;
+    margin: 0px 12px;
+    margin-top: -8px;
+}
+.packBorder{
+    border: solid;
+    border-color: white;
+    border-width: 4px;
+    width: 550px;
+    height: 440px;
+    margin-left: auto; margin-right: auto;
+    padding: 0px;
+    margin-top: 10px;
+}
+.iconGrid label{
+  cursor:pointer;
+  background: chartreuse;
+  border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 5px;
+}
+.packIcons img{
+  width: 80px;
+  height: 80px;
+}
+.visually-hidden{ /* Hides checkboxes and positions them on top of icons(supposidly good for touch screens as opposed to hiding them off screen)*/
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  opacity: 0;
+  top: 50px; left: 35px;
+  cursor:pointer;
+}
+/* input[type=checkbox] + label {
+  / For when box is checked /
+}  */
+
+.iconGrid input[type=checkbox]:checked + label { /* Does this apply to all chekcbox labels? How do I make it more specific?*/
+  background: darkblue;
+  border-style: solid;
+  border-width: 4px;
+  border-color: white;
+  margin: 0px /* label margin - border width, accounts for changing size*/
+}
+
+
+
+
+details {
+  border: none;
+  
+  width: 150px;
+}
+
+
+summary {
+  border: none;
+  list-style: none;
+  outline: none;
+}
+
+details[open] {
+  border: none;
+}
+
+details[open] summary {
+  border: none;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease;
+}
+
+@keyframes sweep {
+  0%   {opacity: 0; margin-top: -10px}
+  10%  {opacity: 0.1; margin-top: -7.5px}
+  20%  {opacity: 0.2; margin-top: -5px}
+  30%  {opacity: 0.3; margin-top: -2.5px}
+  40%  {opacity: 0.4; margin-top: 0px}
+  50%  {opacity: 0.5;margin-top: 2.5px}
+  60%  {opacity: 0.6; margin-top: 5px}
+  70%  {opacity: 0.7; margin-top: 7.5px}
+  80%  {opacity: 0.8; margin-top: 10px}
+  90%  {opacity: 0.9;}
+  100% {opacity: 1}
+}
+
+.fa-grip-vertical {
+  color: chartreuse;
+  font-size: 25px;
+  padding-right: 5px;
+}
+
+
+
+
+
+
+/* div {
+  position: relative;
+}
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 100%;
+  height: 100%;
+  opacity: 10;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #4a19ff;
+  margin: 20px 200px 0;
+}
+label {
+  cursor: pointer;
+}
+label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  font-family: "Spicy Rice", cursive;
+}
+label::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 10px;
+  border-left: 8px solid white;
+  border-top: 8px solid /*transparent;
+  border-bottom: 8px solid /*transparent;
+  margin-top: -8px;
+}
+input[type="checkbox"]:checked ~ h2 label::before {
+  border-left: 8px solid /*transparent/;
+  border-top: 8px solid black;
+  border-right: 8px solid /*transparent/;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+p {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 200px;
+  transition: max-height 0.4s ease;
+}
+.packMenu {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 200px;
+  transition: max-height 0.4s ease;
+}
+input[type="checkbox"]:checked ~ h2 ~ p {
+  max-height: 100px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*when window grows text box moves down it: fixed when numerical margin value is used, only happens on %. Why?
+//button too close to logo, margin ignored.
+//I think I would prefer the button to stay in one place. I don't like it shifting down with word generation
+//but disapears with small window
+//why does the button stop being centered when I make it block instead of inline-block even when using auto margins?
+// bottom text shifts down when top one grows, moves under button when margin too small, ignores block?
+
+//Idea: make sidebar semitransparent and recenter main page. When links are hovered over semitransparent pop-ups could come up that cover main text(cascading menu)
